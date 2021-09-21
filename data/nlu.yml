@@ -1,0 +1,253 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - salut
+    - coucou
+    - cc
+    - bonjour
+    - bonsoir
+    - wesh
+    - hi
+    - salam
+    - eho
+    - allo
+    - slt
+    - s'il te plait
+    - s'il vous plait
+
+
+
+- intent : ask_name
+  examples: |
+    - comment tu t'appelles?
+    - ton nom ?
+    - votre nom ?
+    - tu t'appelles
+    - c'est qui ?
+
+- intent: goodbye
+  examples: |
+    - à bientot
+    - au revoir
+    - bye
+    - à tout à l'heure
+    - bonne nuit
+    - à plus
+    - goodbye
+    - bye bye
+    - à demain
+
+
+- intent: affirm
+  examples: |
+    - oui
+    - ouais
+    - yep
+    - bien sur
+    - d'accord
+    - vrai
+
+- intent: deny
+  examples: |
+    - no
+    - non
+    - jamais
+    - je ne pense pas
+    - je ne suis pas d'accord
+    - pas vrai
+
+
+- intent: mood_great
+  examples: |
+    - parfait
+    - bien
+    - je vais très bien
+    - ça marche
+    - agréable
+    - très bon
+
+
+- intent: mood_unhappy
+  examples: |
+    - terrible
+    - pas bien
+    - je me sens pas bien
+    - triste
+
+- intent: bot_challenge
+  examples: |
+    - tu es un bot?
+    - tu es humain?
+    - parle-je à un bot?
+    - parle-je à un homme?
+
+- intent : user_sorry
+  examples: |
+    - pardon
+    - je m'excuse
+    - désolé
+
+- intent : avalaible_products
+  examples: |
+    - je veux acheter un produit
+    - qu'est ce que vous vendez ?
+    - quels sont les produits disponibles ?
+    - vos produits ?
+    - quels sont les types des produits ?
+    - je veux un produit
+    - je veux acheter
+    - qu'est que vous avez ?
+    - qu'est ce que vous offrez ?
+    - des suggestions ?
+    - quels sont tes suggestions ?
+
+- intent : methodes_livraison
+  examples: |
+    - les méthodes de livraison ?
+    - comment je peux recevoir mon produit ?
+    - comment vous livrez ?
+
+- intent : possibilite_livraison
+  examples: |
+    - est ce que vous livrez ?
+    - la livraison est disponible ?
+    - est ce qu'il y a la livraison ?
+
+- intent : user_merci
+  examples: |
+    - merci
+    - merci beaucoup
+    - merci bcp
+    - ok merci
+    - d'accord merci
+
+- intent : user_liv_gratuite
+  examples: |
+    - casablanca
+    - settat
+
+- intent : user_liv_payante
+  examples: |
+    - rabat
+    - eljadida
+    - marrakech
+    - tanger
+    - meknes
+    - fes
+
+- intent : user_cv
+  examples: |
+    - comment allez-vous ?
+    - cv ?
+    - ca va?
+    - ça va ?
+    - ça marche ?
+    - tu vas bien ?
+    - vous allez bien ?
+    - comment vas-tu ?
+    - et toi ?
+    - cv et toi ?
+    - je vais trés bien et toi ?
+    - je vais trés bien et vous ?
+    - et vous ?
+    - parfait et toi ?
+    - parfait et vous ?
+    - bien et toi ?
+    - bien et vous ?
+    - trés bon et toi ?
+
+
+- intent : produits_planches
+  examples: |
+    - vous avez des planches ?
+    - vous offrez des planches ?
+    - quels sont les planches disponibles ?
+    - je veux acheter des planches
+
+- intent : produits_chapeaux
+  examples: |
+    - vous avez des chapeaux ?
+    - vous offrez des chapeaux ?
+    - quels sont les chapeaux disponibles ?
+    - je veux acheter des chapeaux
+
+- intent : produits_gants
+  examples: |
+    - vous avez des gants ?
+    - vous offrez des gants ?
+    - quels sont les gants disponibles ?
+    - je veux acheter des gants
+
+- intent : produits_bottes
+  examples: |
+    - vous avez des bottes ?
+    - vous offrez des bottes ?
+    - quels sont les bottes disponibles ?
+    - je veux acheter des bottes
+
+- intent : intro
+  examples: |
+    - commence
+
+- intent : prix
+  examples: |
+    - quel est le prix ?
+    - prix ?
+    - combien ça coute ?
+    - c'est combien ?
+
+- intent : description_chapeau
+  examples: |
+    - Les détails de ce chapeau ?
+    - décrivez-moi ce chapeau ?
+
+- intent : description_gant
+  examples: |
+    - Les détails de ces gants ?
+    - décrivez-moi ces gants ?
+
+- intent : description_planche
+  examples: |
+    - Les détails de cette planche ?
+    - décrivez-moi cette planche ?
+
+- intent : àpropos_nous
+  examples: |
+    - c'est quoi ?
+    - qui etes-vous?
+    - à propos de vous ?
+
+- intent : promotions
+  examples: |
+    - quelles sont les promotions disponibles ?
+    - vos promos ?
+    - les promotions actuelles ?
+    - vos promotions ?
+    - est-ce qu'il y a une promotion ?
+
+- intent: détails-promotion1
+  examples: |
+    - Les détails de la première promotion
+    - quels sont les détails de la première promotion?
+    - la promotion des chapeaux
+
+- intent: détails-promotion2
+  examples: |
+    - Les détails de la deuxième promotion
+    - quels sont les détails de la deuxième promotion?
+    - la promotion des bottes
+
+- intent: horaires
+  examples: |
+    - quels sont vos horaires ?
+    - vos horaires ?
+    - est-ce que vous etes ouvert ?
+
+
+- intent: contact
+  examples: |
+    - comment je peux vous contacter ?
+    - vos contacts ?
+    - je veux vous contacter

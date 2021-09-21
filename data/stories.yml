@@ -1,0 +1,236 @@
+version: "2.0"
+
+stories:
+
+- story: salut_heureux1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: salut_heureux2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: user_cv
+  - action: utter_mood
+
+- story: salut_heureux3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: user_cv
+  - action: utter_mood
+
+- story: salut_malheureux1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: salut_malheureux2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_resp_mood_bad
+
+- story: comment tu t'appelles ?
+  steps:
+    - intent : ask_name
+    - action : utter_give_name
+
+- story: achat_path1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: avalaible_products
+  - action: utter_available_products
+  - intent: produits_chapeaux
+  - action: utter_chapeaux
+  - intent: user_merci
+  - action: utter_merci_rep
+
+- story: achat_path2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: avalaible_products
+  - action: utter_available_products
+  - intent: produits_gants
+  - action: utter_gants
+  - intent: user_merci
+  - action: utter_merci_rep
+
+- story: achat_path3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: avalaible_products
+  - action: utter_available_products
+  - intent: produits_bottes
+  - action: utter_bottes
+  - intent: user_merci
+  - action: utter_merci_rep
+
+- story: achat_path4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: avalaible_products
+  - action: utter_available_products
+  - intent: produits_planches
+  - action: utter_planches
+  - intent: user_merci
+  - action: utter_merci_rep
+
+- story: remerciement
+  steps:
+  - intent: user_merci
+  - action: utter_merci_rep
+
+- story: achat_chapeaux
+  steps:
+    - intent: produits_chapeaux
+    - action: utter_chapeaux
+
+- story: achat_bottes
+  steps:
+    - intent: produits_bottes
+    - action: utter_bottes
+
+- story: achat_planches
+  steps:
+    - intent: produits_chapeaux
+    - action: utter_chapeaux
+
+- story: achat_gants
+  steps:
+    - intent: produits_gants
+    - action: utter_gants
+
+- story: methodes_livraison
+  steps:
+    - intent: intro
+    - action: utter_introduction
+    - intent: methodes_livraison
+    - action: utter_localisation
+    - intent: user_liv_gratuite
+    - action: utter_livraison_gratuite
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_daccord
+
+- story: methodes_livraison3
+  steps:
+    - intent: intro
+    - action: utter_introduction
+    - intent: methodes_livraison
+    - action: utter_localisation
+    - intent: user_liv_gratuite
+    - action: utter_livraison_gratuite
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_desole
+
+
+- story: methodes_livraison2
+  steps:
+    - intent: intro
+    - action: utter_introduction
+    - intent: methodes_livraison
+    - action: utter_localisation
+    - intent: user_liv_payante
+    - action: utter_livraison_payante
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_daccord
+
+- story: methodes_livraison4
+  steps:
+    - intent: intro
+    - action: utter_introduction
+    - intent: methodes_livraison
+    - action: utter_localisation
+    - intent: user_liv_payante
+    - action: utter_livraison_payante
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_desole
+
+- story: debut_conversation
+  steps:
+    - intent: intro
+    - action: utter_introduction
+
+- story: ask_prix
+  steps:
+   - intent: prix
+   - action: utter_prix
+   - action: utter_introduction_cont
+
+- story: ask_details_1
+  steps:
+    - intent: description_chapeau
+    - action: utter_détails_chapeau
+    - action: utter_introduction_cont
+
+- story: ask_details_2
+  steps:
+    - intent: description_gant
+    - action: utter_détails_gants
+    - action: utter_introduction_cont
+
+- story: ask_details_3
+  steps:
+    - intent: description_planche
+    - action: utter_détails_planche
+    - action: utter_introduction_cont
+
+- story: àpropos_nous
+  steps:
+    - intent: àpropos_nous
+    - action: utter_apropos
+    - action: utter_plus_info
+
+- story: promotions1
+  steps:
+    - intent: intro
+    - action: utter_introduction
+    - intent: promotions
+    - action: utter_promotions
+    - intent : détails-promotion1
+    - action : utter_détails-promo-1
+    - action: utter_introduction_cont
+
+- story: promotions2
+  steps:
+    - intent: intro
+    - action: utter_introduction
+    - intent: promotions
+    - action: utter_promotions
+    - intent : détails-promotion2
+    - action : utter_détails-promo-2
+    - action: utter_introduction_cont
+
+- story: contacts
+  steps:
+    - intent : contact
+    - action : utter_contact
+    - action : utter_introduction_cont
+
+- story: horaires
+  steps:
+    - intent : horaires
+    - action : utter_horaires
+    - action : utter_introduction_cont

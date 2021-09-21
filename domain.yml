@@ -1,0 +1,383 @@
+//rasa version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_name
+  - avalaible_products
+  - methodes_livraison
+  - possibilite_livraison
+  - user_merci
+  - user_cv
+  - produits_bottes
+  - produits_gants
+  - produits_chapeaux
+  - produits_planches
+  - intro
+  - user_liv_gratuite
+  - user_liv_payante
+  - prix
+  - description_chapeau
+  - description_gant
+  - description_planche
+  - àpropos_nous
+  - promotions
+  - détails-promotion1
+  - détails-promotion2
+  - contact
+  - horaires
+
+responses:
+  utter_greet:
+  - text: "salut! comment allez-vous?"
+
+  utter_give_name:
+    - text: "je m'appelle ahmed !"
+
+
+  utter_cheer_up:
+  - text: "voilà quelque chose pour vous réconforter:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "ça vous a aidé?"
+
+  utter_happy:
+  - text: "agréable, heureux d'entendre!"
+
+  utter_goodbye:
+  - text: "Au revoir! merci pour votre visite"
+
+  utter_iamabot:
+  - text: "je suis un bot développé par ELLAWLI"
+
+  utter_available_products:
+    - text: "Voilà les types de produits disponibles : "
+      buttons :
+        - title: "Planches"
+          payload: je veux acheter des planches
+        - title: "Chapeaux"
+          payload: je veux acheter des chapeaux
+        - title: "Bottes"
+          payload: je veux acheter des bottes
+        - title: "Gants"
+          payload: je veux acheter des gants
+
+
+  utter_available_delivery:
+    - text: "oui monsieur! la livraison est disponible partout dans le maroc"
+
+  utter_choix:
+    - text: "qu'est ce que vous désirez ?"
+
+  utter_merci:
+    - text: "merci beaucoup!"
+
+  utter_merci_rep:
+    - text: "je vous en prie !"
+
+  utter_mood:
+    - text: "je vais très bien, merci!"
+
+  utter_resp_mood_bad:
+    - text: "triste d'entendre! détends-toi ça va passer !"
+
+  utter_desole:
+    - text: "pardon! pouvez-vous reformuler votre question?"
+
+  utter_planches:
+    - text: "les planches disponibles : "
+      attachment: {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [ {
+            "title": "Planche 1",
+            "subtitle": "La première planche",
+            "image_url": "https://www.beachbrother.com/img/pictures/2017/20170315/1703155716.jpg",
+            "buttons": [ {
+              "title": "Prix",
+              "type": "postback",
+              "payload": "/prix"
+            },
+              {
+                "title": "Détails",
+                "type": "postback",
+                "payload": "décrivez-moi cette planche ?"
+              }
+            ]
+          },
+            {
+              "title": "Planche 2",
+              "subtitle": "deuxième planche",
+              "image_url": "https://i.pinimg.com/236x/dc/27/b2/dc27b2cd2b72285bcead8acff10191b4--surfboard-art-design-surfboard-design-ideas.jpg",
+              "buttons": [ {
+                "title": "Prix",
+                "type": "postback",
+                "payload": "/prix"
+              },
+                {
+                  "title": "Détails",
+                  "type": "postback",
+                  "payload": "décrivez-moi cette planche ?"
+                }
+                       ]
+                    }
+                ]
+            }
+        }
+
+
+
+
+  utter_chapeaux:
+    - text: "les chapeaux disponibles : "
+      attachment: {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [ {
+            "title": "Chapeau 1",
+            "subtitle": "Le premier chapeau",
+            "image_url": "https://images-na.ssl-images-amazon.com/images/I/715XgWuHFyL._AC_UL1290_.jpg",
+            "buttons": [ {
+              "title": "Prix",
+              "type": "postback",
+              "payload":"/prix"
+            },
+              {
+                "title": "Détails",
+                "type": "postback",
+                "payload": "/description_chapeau"
+              }
+            ]
+          },
+            {
+              "title": "Chapeau 2",
+              "subtitle": "deuxième chapeau",
+              "image_url": "https://images-na.ssl-images-amazon.com/images/I/71OsnMNDM%2BL._AC_UX342_.jpg",
+              "buttons": [ {
+                "title": "Prix",
+                "type": "postback",
+                "payload": "/prix"
+              },
+                {
+                  "title": "Détails",
+                  "type": "postback",
+                  "payload": "/description_chapeau"
+                }
+                     ]
+                    }
+                ]
+            }
+        }
+
+  utter_gants:
+    - text: "les gants disponibles : "
+      attachment: {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [ {
+            "title": "Gant 1",
+            "subtitle": "Les premiers gant",
+            "image_url": "https://images-na.ssl-images-amazon.com/images/I/91-diiMJd9L._AC_UX569_.jpg",
+            "buttons": [ {
+              "title": "Prix",
+              "type": "postback",
+              "payload": "/prix",
+
+            },
+              {
+                "title": "Détails",
+                "type": "postback",
+                "payload": "/description_gant"
+              }
+            ]
+          },
+            {
+              "title": "Gant 2",
+              "subtitle": "deuxième gant",
+              "image_url": "data:image/jpeg;base64,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",
+              "buttons": [ {
+                "title": "Prix",
+                "type": "postback",
+                "payload": "/prix",
+
+              },
+                {
+                  "title": "Détails",
+                  "type": "postback",
+                  "payload": "/description_gant"
+                }
+                     ]
+                    }
+                ]
+            }
+        }
+
+
+
+  utter_bottes:
+    - text: "les bottes disponibles : "
+      attachment: {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [ {
+            "title": "bottes 1",
+            "subtitle": "Les premiers bottes",
+            "image_url": "https://www.rei.com/media/24ace2bc-2c42-4363-9897-53448610fb02?size=784x588",
+            "buttons": [ {
+              "title": "Prix",
+              "type": "postback",
+              "payload": "/prix",
+
+            },
+              {
+                "title": "Détails",
+                "type": "postback",
+                "payload": "/greet"
+              }
+            ]
+          },
+            {
+              "title": "Bottes 2",
+              "subtitle": "deuxièmes bottes",
+              "image_url": "http://static1.squarespace.com/static/55fb5e9ee4b040a2fa806e8a/55fcd1ade4b04d304c90c8c6/562942ede4b0a20516fe1162/1450391949663/?format=1500w",
+              "buttons": [ {
+                "title": "Prix",
+                "type": "postback",
+                "payload": "/prix",
+
+              },
+                {
+                  "title": "Détails",
+                  "type": "postback",
+                  "payload": "/greet"
+                }
+                       ]
+                    }
+                ]
+            }
+        }
+
+  utter_introduction:
+      - text: "Bonjour ! je suis votre assisstant virtuel \n comment je peux vous aider ?"
+        buttons:
+          - title: "Produits disponibles"
+            payload: "je veux acheter un produit"
+          - title: "La Livraison"
+            payload: "/methodes_livraison"
+          - title: "A propos de nous"
+            payload: "/àpropos_nous"
+          - title: "Nos promos"
+            payload: "quelles sont les promotions disponibles ?"
+
+  utter_localisation:
+   - text: "Où vous situez vous ?"
+
+  utter_livraison_gratuite:
+    - text : " La livraison est gratuite pour les régions de casablanca "
+
+  utter_contact:
+    - text : " Voilà comment vous pouvez nous contacter : \n
+               &#128222; Tel : +212658832620 \n
+               &#128234; Mail : CloudyStore@gmail.com"
+
+  utter_horaires:
+    - text : "Nos horaires de travail : \n &#128342; de 9h à 20h 7j/j"
+
+
+  utter_livraison_payante:
+     - text : " On peut vous livrer via amana "
+
+  utter_daccord:
+     - text : "agréable! heureux de vous aider"
+
+  utter_prix:
+    - text : "Le prix de ce produit est 250 DHS"
+
+  utter_détails_chapeau:
+    - text : "Avec son large bord, ce grand chapeau de cotton est parfait pour vous protéger le visage. "
+
+  utter_détails_gants:
+    - text : "Gant long hiver - Serrage par élastique sous le poignet - Gants homologués selon la norme EN 13594"
+
+  utter_détails_planche:
+    - text : "Nous vous présentons planche kitesurf CABRINHA X:Breed 2020de la marque CABRINHA Un produit parfait pour la pratique : Water Sports > Kitesurf > Boards de Kitesurf > Surf de kite 2018"
+
+  utter_introduction_cont:
+    - text : "comment puis-je vous aider plus?"
+      buttons:
+        - title: "Produits disponibles"
+          payload: "je veux acheter un produit"
+        - title: "La Livraison"
+          payload: "/methodes_livraison"
+        - title: "A propos de nous"
+          payload: "/àpropos_nous"
+        - title: "Nos promos"
+          payload: "quelles sont les promotions disponibles ?"
+
+  utter_plus_info:
+    - text: "comment puis-je vous aider plus?"
+      buttons:
+        - title: "Nos contacts"
+          payload: "comment je peux vous contacter ?"
+        - title: "Nos horaires"
+          payload: "quels sont vos horaires ?"
+
+
+  utter_détails-promo-1:
+    - text : "Durant tout ce mois ! profitez de notre offre exclusive : votre chapeau préféré à seulement 50% du prix &#128512; \n l'offre est valable dans la limite des stocks disponibles ! &#128561;"
+
+  utter_détails-promo-2:
+    - text: "Durant tout ce mois ! profitez de notre offre exclusive : vos bottes préférés à seulement 40% du prix &#128512; \n l'offre est valable dans la limite des stocks disponibles ! &#128561;"
+
+  utter_promotions:
+    - text: "les promotions actuelles : "
+      attachment: {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [ {
+            "title": "Chapeau",
+            "subtitle": "réduction de 50%",
+            "image_url": "http://localhost:8888/promotions/chap1.jpg",
+            "buttons": [
+              {
+                "title": "Détails de promo",
+                "type": "postback",
+                "payload": "/détails-promotion1"
+              }
+            ]
+          },
+            {
+              "title": "Bottes",
+              "subtitle": "réduction de 40%",
+              "image_url": "http://localhost:8888/promotions/bottes1.jpeg",
+              "buttons": [
+                {
+                  "title": "Détails de promo",
+                  "type": "postback",
+                  "payload": "/détails-promotion2"
+                }
+              ]
+            }
+          ]
+        }
+      }
+
+
+
+  utter_apropos:
+    - text : "Cloudy Store est une boutique en ligne consacré à la mode sportive, qui propose une variété de produits (gants, planches, chapeaux ...)"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
